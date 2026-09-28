@@ -1,0 +1,8 @@
+/target/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+*.sock
+/AGENT.md

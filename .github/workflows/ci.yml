@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Rust 1.95.0 / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Install Rust
+        run: rustup toolchain install 1.95.0 --profile minimal --component rustfmt --component clippy --no-self-update
+      - name: Check formatting
+        run: cargo +1.95.0 fmt --check
+      - name: Run Clippy
+        run: cargo +1.95.0 clippy --locked --workspace --all-targets -- -D warnings
+      - name: Run tests
+        run: cargo +1.95.0 test --locked --workspace
+      - name: Build release binary
+        run: cargo +1.95.0 build --locked --release

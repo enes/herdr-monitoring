@@ -1,0 +1,35 @@
+id = "herdr.resource-monitor"
+name = "Herdr Resource Monitor"
+version = "0.1.0"
+min_herdr_version = "0.9.1"
+description = "Summary popup and focused resource monitor pane"
+platforms = ["macos", "linux", "windows"]
+
+[[actions]]
+id = "open-summary"
+title = "Open resource summary"
+contexts = ["global"]
+command = ["./target/release/herdr-resource-monitor", "open-summary"]
+
+[[actions]]
+id = "toggle-focused"
+title = "Toggle resource monitor"
+contexts = ["pane"]
+command = ["./target/release/herdr-resource-monitor", "toggle-focused"]
+
+[[build]]
+command = ["cargo", "build", "--locked", "--release"]
+
+[[panes]]
+id = "summary"
+title = "Resource Summary"
+placement = "popup"
+width = "70%"
+height = 22
+command = ["./target/release/herdr-resource-monitor", "summary"]
+
+[[panes]]
+id = "focused"
+title = "Resource Details"
+placement = "split"
+command = ["./target/release/herdr-resource-monitor", "focused"]

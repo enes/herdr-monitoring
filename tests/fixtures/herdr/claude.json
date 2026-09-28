@@ -1,0 +1,178 @@
+{
+  "snapshot": {
+    "id": "cli:api:snapshot",
+    "result": {
+      "type": "session_snapshot",
+      "snapshot": {
+        "version": "0.9.1",
+        "protocol": 22,
+        "focused_workspace_id": "ws:1",
+        "focused_tab_id": "tab:1",
+        "focused_pane_id": "p:2",
+        "workspaces": [],
+        "tabs": [],
+        "layouts": [],
+        "panes": [
+          {
+            "pane_id": "p:2",
+            "terminal_id": "terminal:2",
+            "workspace_id": "ws:1",
+            "tab_id": "tab:1",
+            "focused": true,
+            "agent_status": "working",
+            "revision": 2,
+            "cwd": "/fixture/project",
+            "foreground_cwd": "/fixture/project/src",
+            "label": "same label",
+            "agent": "claude",
+            "display_agent": "Claude",
+            "tokens": {
+              "fixture_model": "fixture-claude-model",
+              "fixture_effort": "xhigh"
+            },
+            "state_labels": {
+              "fixture_phase": "coding"
+            },
+            "agent_session": {
+              "source": "fixture-hook",
+              "agent": "claude",
+              "kind": "id",
+              "value": "fixture-session-2"
+            }
+          }
+        ],
+        "agents": [
+          {
+            "pane_id": "p:2",
+            "terminal_id": "terminal:2",
+            "workspace_id": "ws:1",
+            "tab_id": "tab:1",
+            "focused": true,
+            "agent_status": "working",
+            "revision": 2,
+            "cwd": "/fixture/project",
+            "foreground_cwd": "/fixture/project/src",
+            "agent": "claude",
+            "display_agent": "Claude",
+            "tokens": {
+              "fixture_model": "fixture-claude-model",
+              "fixture_effort": "xhigh"
+            },
+            "state_labels": {
+              "fixture_phase": "coding"
+            },
+            "agent_session": {
+              "source": "fixture-hook",
+              "agent": "claude",
+              "kind": "id",
+              "value": "fixture-session-2"
+            },
+            "name": "same agent name",
+            "interactive_ready": true,
+            "fixture_extra": {
+              "preserved": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "panes": {
+    "id": "cli:pane:list",
+    "result": {
+      "type": "pane_list",
+      "panes": [
+        {
+          "pane_id": "p:2",
+          "terminal_id": "terminal:2",
+          "workspace_id": "ws:1",
+          "tab_id": "tab:1",
+          "focused": true,
+          "agent_status": "working",
+          "revision": 2,
+          "cwd": "/fixture/project",
+          "foreground_cwd": "/fixture/project/src",
+          "label": "same label",
+          "agent": "claude",
+          "display_agent": "Claude",
+          "tokens": {
+            "fixture_model": "fixture-claude-model",
+            "fixture_effort": "xhigh"
+          },
+          "state_labels": {
+            "fixture_phase": "coding"
+          },
+          "agent_session": {
+            "source": "fixture-hook",
+            "agent": "claude",
+            "kind": "id",
+            "value": "fixture-session-2"
+          }
+        }
+      ]
+    }
+  },
+  "agents": {
+    "id": "cli:agent:list",
+    "result": {
+      "type": "agent_list",
+      "agents": [
+        {
+          "pane_id": "p:2",
+          "terminal_id": "terminal:2",
+          "workspace_id": "ws:1",
+          "tab_id": "tab:1",
+          "focused": true,
+          "agent_status": "working",
+          "revision": 2,
+          "cwd": "/fixture/project",
+          "foreground_cwd": "/fixture/project/src",
+          "agent": "claude",
+          "display_agent": "Claude",
+          "tokens": {
+            "fixture_model": "fixture-claude-model",
+            "fixture_effort": "xhigh"
+          },
+          "state_labels": {
+            "fixture_phase": "coding"
+          },
+          "agent_session": {
+            "source": "fixture-hook",
+            "agent": "claude",
+            "kind": "id",
+            "value": "fixture-session-2"
+          },
+          "name": "same agent name",
+          "interactive_ready": true,
+          "fixture_extra": {
+            "preserved": true
+          }
+        }
+      ]
+    }
+  },
+  "process_info": {
+    "id": "cli:pane:process_info",
+    "result": {
+      "type": "pane_process_info",
+      "process_info": {
+        "pane_id": "p:2",
+        "shell_pid": 1002,
+        "foreground_process_group_id": 2002,
+        "foreground_processes": [
+          {
+            "pid": 3002,
+            "name": "claude",
+            "argv": [
+              "claude",
+              "/fixture/path with spaces"
+            ],
+            "argv0": "claude",
+            "cmdline": "claude /fixture/path with spaces",
+            "cwd": "/fixture/project/src"
+          }
+        ]
+      }
+    }
+  }
+}

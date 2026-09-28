@@ -1,0 +1,18 @@
+[package]
+name = "herdr-resource-monitor"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.95"
+description = "Resource monitor plugin for Herdr"
+license = "MIT"
+readme = "README.md"
+publish = false
+
+[dependencies]
+ratatui = { version = "0.30.2", default-features = false, features = ["crossterm_0_29"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sysinfo = { version = "0.39.6", default-features = false, features = ["system"] }
+
+[target.'cfg(windows)'.dependencies]
+tokio = { version = "1", features = ["rt", "net", "time", "io-util", "sync", "macros"] }

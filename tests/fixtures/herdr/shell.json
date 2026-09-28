@@ -1,0 +1,84 @@
+{
+  "snapshot": {
+    "id": "cli:api:snapshot",
+    "result": {
+      "type": "session_snapshot",
+      "snapshot": {
+        "version": "0.9.1",
+        "protocol": 22,
+        "focused_workspace_id": "ws:1",
+        "focused_tab_id": "tab:1",
+        "focused_pane_id": "p:3",
+        "workspaces": [],
+        "tabs": [],
+        "layouts": [],
+        "panes": [
+          {
+            "pane_id": "p:3",
+            "terminal_id": "terminal:3",
+            "workspace_id": "ws:1",
+            "tab_id": "tab:1",
+            "focused": true,
+            "agent_status": "unknown",
+            "revision": 3,
+            "cwd": "/fixture/project",
+            "foreground_cwd": "/fixture/project/src",
+            "label": "same label"
+          }
+        ],
+        "agents": []
+      }
+    }
+  },
+  "panes": {
+    "id": "cli:pane:list",
+    "result": {
+      "type": "pane_list",
+      "panes": [
+        {
+          "pane_id": "p:3",
+          "terminal_id": "terminal:3",
+          "workspace_id": "ws:1",
+          "tab_id": "tab:1",
+          "focused": true,
+          "agent_status": "unknown",
+          "revision": 3,
+          "cwd": "/fixture/project",
+          "foreground_cwd": "/fixture/project/src",
+          "label": "same label"
+        }
+      ]
+    }
+  },
+  "agents": {
+    "id": "cli:agent:list",
+    "result": {
+      "type": "agent_list",
+      "agents": []
+    }
+  },
+  "process_info": {
+    "id": "cli:pane:process_info",
+    "result": {
+      "type": "pane_process_info",
+      "process_info": {
+        "pane_id": "p:3",
+        "shell_pid": 1003,
+        "foreground_process_group_id": 2003,
+        "foreground_processes": [
+          {
+            "pid": 3003,
+            "name": "zsh",
+            "argv": [
+              "zsh",
+              "/fixture/path with spaces"
+            ],
+            "argv0": "zsh",
+            "cmdline": "zsh /fixture/path with spaces",
+            "cwd": "/fixture/project/src"
+          }
+        ]
+      }
+    }
+  }
+}
